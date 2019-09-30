@@ -1,0 +1,680 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="John Doe">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Posts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:300,400,400i,700|&display=fallback">
+        <style>body,input{font-family:"Catamaran","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#usando-neo4j-y-php" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Bases de datos a gran escala" class="md-header-nav__button md-logo">
+          
+            <img src="../images/ual.jpg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Bases de datos a gran escala
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Posts
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Bases de datos a gran escala" class="md-nav__button md-logo">
+      
+        <img src="../images/ual.jpg" width="48" height="48">
+      
+    </a>
+    Bases de datos a gran escala
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Inicio" class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Usando MongoDB y PHP/" title="MongoDB y PHP" class="md-nav__link">
+      MongoDB y PHP
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Neo4j y PHP
+      </label>
+    
+    <a href="./" title="Neo4j y PHP" class="md-nav__link md-nav__link--active">
+      Neo4j y PHP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-a-neo4j" class="md-nav__link">
+    Conexión a Neo4j
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaccion-con-neo4j" class="md-nav__link">
+    Interacción con Neo4j
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-nodos" class="md-nav__link">
+    Creación de nodos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-relaciones" class="md-nav__link">
+    Creación de relaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-parametros-en-las-consultas" class="md-nav__link">
+    Uso de parámetros en las consultas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-y-eliminacion" class="md-nav__link">
+    Actualización y eliminación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consulta-basica" class="md-nav__link">
+    Consulta básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultas-que-devuelven-un-solo-nodo" class="md-nav__link">
+    Consultas que devuelven un solo nodo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y-si-return-devuelve-varios-elementos" class="md-nav__link">
+    ¿Y si RETURN devuelve varios elementos?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recorrido-del-conjunto-de-nodos" class="md-nav__link">
+    Recorrido del conjunto de nodos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorrido-del-conjunto-de-relaciones" class="md-nav__link">
+    Recorrido del conjunto de relaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-las-relaciones-de-un-nodo" class="md-nav__link">
+    Obtener las relaciones de un nodo
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-a-neo4j" class="md-nav__link">
+    Conexión a Neo4j
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interaccion-con-neo4j" class="md-nav__link">
+    Interacción con Neo4j
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-nodos" class="md-nav__link">
+    Creación de nodos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-relaciones" class="md-nav__link">
+    Creación de relaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uso-de-parametros-en-las-consultas" class="md-nav__link">
+    Uso de parámetros en las consultas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actualizacion-y-eliminacion" class="md-nav__link">
+    Actualización y eliminación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consulta-basica" class="md-nav__link">
+    Consulta básica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultas-que-devuelven-un-solo-nodo" class="md-nav__link">
+    Consultas que devuelven un solo nodo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y-si-return-devuelve-varios-elementos" class="md-nav__link">
+    ¿Y si RETURN devuelve varios elementos?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recorrido-del-conjunto-de-nodos" class="md-nav__link">
+    Recorrido del conjunto de nodos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorrido-del-conjunto-de-relaciones" class="md-nav__link">
+    Recorrido del conjunto de relaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-las-relaciones-de-un-nodo" class="md-nav__link">
+    Obtener las relaciones de un nodo
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="usando-neo4j-y-php">Usando Neo4j y PHP</h1>
+<p><strong>Duración estimada: 60 minutos</strong></p>
+<p>Neo4j nos ofrece gran cantidad de clientes para interactuar con él mediante diferentes lenguajes de programación (<a href="http://neo4j.com/developer/language-guides/">Drivers Neo4j</a>).</p>
+<p>En nuestro ejemplo interactuaremos con Neo4j mediante PHP. Para PHP existen varios drivers (Neo4jPHP, NeoClient, ...). En la web de Neo4j puedes encontrar una lista más completa de <a href="http://neo4j.com/developer/php/">clientes PHP para Neo4j</a>. En este tutorial usaremos <a href="https://github.com/neoxygen/neo4j-neoclient">NeoClient</a>.</p>
+<h2 id="instalacion">Instalación</h2>
+<p>Como paso previo a la instalación de NeoClient, necesitas tener instalado <a href="https://getcomposer.org/">Composer</a>, un gestor de dependencias para PHP. En el <a href="http://ualmtorres.github.io/howtos/ConfiguracionEntornoGGVD/">Tutorial sobre configuración de un entorno LAMP+NoSQL</a> están disponibles los pasos para tener instalado todo lo necesario para usar Neo4j con PHP (Neo4j, Servidor Apache, PHP y Composer).</p>
+<p>Siguiendo la <a href="https://github.com/neoxygen/neo4j-neoclient">Información de instalación de NeoClient</a> hay que crear en la carpeta del proyecto un archivo <code>composer.json</code> en el que se especifica la dependencia con NeoClient. </p>
+<script src="https://gist.github.com/ualmtorres/67333b8378ba9437a3a5.js"></script>
+
+<p>A continuación, en la carpeta del proyecto instalaremos las dependencias con el comando siguiente</p>
+<div class="codehilite"><pre><span></span><span class="n">composer</span> <span class="n">install</span>
+</pre></div>
+
+
+<h2 id="conexion-a-neo4j">Conexión a Neo4j</h2>
+<p>Para usar las clases de NeoClient debemos hacer referencia el espacio de nombres de NeoClient (<code>Neoxygen\NeoClient</code>). Además, antes de proceder a crear la conexión tenemos que importar el archivo <code>autoload.php</code> generado por Composer al instalar las dependencias.</p>
+<p>La conexión la crearemos mediante el método <code>create()</code> de la clase <code>ClientBuilder</code> de NeoClient. En ella indicaremos varios parámetros, destacando el <em>host</em> y el <em>puerto</em>. En nuestro caso hemos usado <code>localhost</code> y <code>7474</code> (el puerto predeterminado de Neo4j).</p>
+<script src="https://gist.github.com/ualmtorres/8543780ab3b973fa679b.js"></script>
+
+<p>Este código lo podemos guardar en un archivo (p.e. <code>connection.php</code>) para que pueda ser utilizado por cualquier script de nuestra aplicación que tenga que interactuar con Neo4j.</p>
+<h2 id="interaccion-con-neo4j">Interacción con Neo4j</h2>
+<p>Básicamente, la interacción con Neo4j la realizaremos mediante el envío de consultas Cypher a través de la conexión que hemos establecido en el paso anterior.</p>
+<p>El envío de estas consultas se realiza aplicando a una conexión el método <code>sendCypherQuery($query, [$params])</code>. Este método toma como argumento una consulta Cypher y opcionalmente un array asociativo de parámetros.</p>
+<h2 id="creacion-de-nodos">Creación de nodos</h2>
+<p>Los nodos son creados definiendo expresiones en Cypher que serán pasadas como argumento al método <code>sendCypherQuery()</code> sobre la conexión creada.</p>
+<p>A continuación vemos cómo crear un nodo <code>Person</code> para un actor con nombre (<code>name</code>) <em>John Doe</em>, y un nodo <code>Movie</code> para una película con título (<code>title</code>) <em>GGVD</em>. </p>
+<script src="https://gist.github.com/ualmtorres/ffc12f086c65ced28fd7.js"></script>
+
+<h2 id="creacion-de-relaciones">Creación de relaciones</h2>
+<p>Al igual que los nodos, las relaciones son creadas definiendo expresiones en Cypher que serán pasadas como argumento al método <code>sendCypherQuery()</code> sobre la conexión creada.</p>
+<p>A continuación vemos cómo crear una relación entre los nodos <code>Person</code> y <code>Movie</code> creados anteriormente. La relación se denomina <code>ACTED_IN</code> y tiene asociada la propiedad <code>roles</code> con el valor <code>['Johnnie']</code> indicando que el actor <em>John Doe</em> tiene el papel (rol) de <em>Johnnie</em> en la película <em>GGVD</em>.</p>
+<script src="https://gist.github.com/ualmtorres/ac4f506ddce209b6dde3.js"></script>
+
+<h2 id="uso-de-parametros-en-las-consultas">Uso de parámetros en las consultas</h2>
+<p>Las consultas Cypher que pasamos al método <code>sendCypherQuery()</code> se pueden definir parametrizadas. Los parámetros se asignarán posteriormente antes de enviar la consulta a Neo4j.</p>
+<p>A continuación se muestra la misma consulta que usamos anteriormente para definir una relación <code>ACTED_IN</code> entre un nodo <code>Person</code> y un nodo <code>Movie</code>, pero ahora la crearemos de forma parametrizada. En este caso, el nombre de la persona es pasado como parámetro (<code>{theName}</code>), así como el título de la película (<code>{theTitle}</code>).</p>
+<p>Para asignar valores a los parámetros crearemos un array asociativo que tendrá tantos elementos como parámetros hayamos definido. Cada elemento del array de parámetros tendrá como clave el parámetro, y como valor el valor del parámetro.</p>
+<p>En el ejemplo, el array <code>$params</code> define los valores de los dos parámetros definidos en la consulta Cypher.</p>
+<p>Por último, para ejecutar la consulta con el método <code>sendCypherQuery()</code> pasaremos la cadena de la consulta seguida del array de parámetros.</p>
+<script src="https://gist.github.com/ualmtorres/2e703823db3470e1d1cb.js"></script>
+
+<h2 id="actualizacion-y-eliminacion">Actualización y eliminación</h2>
+<p>Como hemos comentado anteriormente, la interacción con Neo4j usando NeoClient se realiza enviando consultas Cypher al método <code>sendCypherQuery()</code>, independientemente de si son para crear nodos, para crear relaciones, o si son para actualizar o eliminar datos de la base de datos.</p>
+<p>Por tanto, para actualizar o eliminar los ejemplos que añadimos anteriomente, basta con definir la expresión Cypher adecuada y ejecutarla con el método <code>sendCypherQuery()</code>.</p>
+<p>El código siguiente elimina el <em>path</em> creado en los ejemplos anteriores formado por el actor <em>John Doe</em>, la película <em>GGVD</em>, y el papel de dicho actor en dicha película.</p>
+<script src="https://gist.github.com/ualmtorres/17fe11faf16d1abfd612.js"></script>
+
+<h2 id="consulta-basica">Consulta básica</h2>
+<p>Los resultados que devuelve una consulta realizada con el método <code>sendCypherQuery()</code> lo asignaremos a un objeto que posteriormente procesaremos para mostrar el resultado de la consulta.</p>
+<p>Básicamente se trata de hacer lo siguiente:</p>
+<ul>
+<li>Obtener los resultados mediante el método <code>getResult()</code>. Aplicaremos este método en cadena tras <code>sendCypherQuery()</code>. </li>
+<li>Asignar los resultados de <code>getResult()</code> a un <em>resultset</em>.</li>
+<li>Recorrer el <em>resultset</em> obteniendo sus elementos (p.e. nodos). El método <code>getNodes()</code> devuelve los nodos de un <em>resultset</em></li>
+<li>Recuperar el valor de una propiedad. El método <code>getProperty(&lt;property&gt;)</code> aplicado a un nodo devuelve el valor de la propiedad que le pasemos como parámetro.</li>
+</ul>
+<p>El ejemplo siguiente muestra los títulos de las películas de 1998. </p>
+<script src="https://gist.github.com/ualmtorres/a9e53e25653024fc25ee.js"></script>
+
+<h2 id="consultas-que-devuelven-un-solo-nodo">Consultas que devuelven un solo nodo</h2>
+<p>En ocasiones nuestras consultas sólo devuelven un nodo, o bien sólo estamos interesados en recuperar un solo nodo de un <em>resultset</em>. </p>
+<p>El método <code>getSingleNode()</code> aplicado a un <em>resultset</em> devuelve un nodo del <em>resultset</em>. Si el <em>resultset</em> contenía un solo nodo, <code>getSingleNode()</code> nos lo devuelve.</p>
+<p>El ejemplo siguiente muestra el año de producción de la película <em>When Harry Met Sally</em>. La consulta recupera un nodo de la base de datos, y mediante <code>getSingleNode()</code> accedemos a él. Una vez recuperado ya le podemos aplicar los métodos aplicables a nodos, como <code>getProperty(&lt;property&gt;)</code>.</p>
+<script src="https://gist.github.com/ualmtorres/57c8c184a6d4c5030969.js"></script>
+
+<h2 id="y-si-return-devuelve-varios-elementos">¿Y si RETURN devuelve varios elementos?</h2>
+<p>Es habitual que las expresiones Cypher incluyan en la cláusula <code>RETURN</code> varios elementos (p.e. varios tipos de nodos, relaciones, y demás).</p>
+<p>Imaginemos la siguiente expresión Cypher:</p>
+<div class="codehilite"><pre><span></span><span class="nv">MATCH</span> <span class="ss">(</span><span class="nv">m</span>: <span class="nv">Movie</span> {<span class="nv">released</span>: <span class="mi">1998</span>}<span class="ss">)</span><span class="o">&lt;-</span>[<span class="nv">r</span>:<span class="nv">ACTED_IN</span>]<span class="o">-</span><span class="ss">(</span><span class="nv">p</span>: <span class="nv">Person</span><span class="ss">)</span> <span class="k">RETURN</span> <span class="nv">p</span>, <span class="nv">r</span>, <span class="nv">m</span>
+</pre></div>
+
+
+<p>Para este caso, los métodos <code>getNodes()</code> y <code>getSingleNode()</code> no funcionarían correctamente al aplicarlos sobre el <em>resultset</em>, ya que no sabrían si actuar sobre los nodos <code>p</code>, las relaciones <code>r</code>, o los nodos <code>m</code>.</p>
+<p>En casos como este, aplicaremos el método <code>get(&lt;elemento&gt;)</code> sobre el <em>resultset</em> para obtener el elemento del <code>RETURN</code> en el que estemos interesados.</p>
+<p>El siguiente script ejecuta una consulta que devuelve los nodos película, persona y relación <code>ACTED_IN</code> para películas de 1998. A continuación, asigna los tres elementos del <code>RETURN</code> a tres variables. Para acceder a los elementos que devuelve el <code>RETURN</code> se usa el método <code>get(&lt;elemento&gt;)</code> sobre el <em>resultset</em></p>
+<script src="https://gist.github.com/ualmtorres/97ed79f448a72b18b662.js"></script>
+
+<h3 id="recorrido-del-conjunto-de-nodos">Recorrido del conjunto de nodos</h3>
+<p>En el script anterior, <code>$actors</code> contiene la lista de nodos <code>Person</code> de las películas recuperadas. Para acceder a ellos, basta con iterar sobre <code>$actors</code> con un <code>foreach</code> y acceder a las propiedades de cada nodo con <code>getProperty(&lt;propiedad&gt;)</code>.</p>
+<h3 id="recorrido-del-conjunto-de-relaciones">Recorrido del conjunto de relaciones</h3>
+<p>En el script anterior, <code>$relationships</code> contiene la lista de relaciones entre los nodos de las películas recuperadas y los nodos de los actores que actuan en ellas. </p>
+<p>Cada relación tiene dos extremos, el nodo de inicio y el nodo de fin de la relación. Los métodos <code>getStartNode()</code> y <code>getEndNode()</code> aplicados a una relación devuelven, respectivamente, el nodo de inicio y el nodo de fin de la relación.</p>
+<p>Para acceder a los nodos de las relaciones tendremos que iterar sobre <code>$relationships</code> con un <code>foreach</code>, y acceder a los nodos de inicio y fin con <code>getStartNode()</code> y <code>getEndNode()</code>, respectivamente. A continuación, y ya sobre cada nodo podremos acceder a las propiedades de cada nodo con <code>getProperty(&lt;propiedad&gt;)</code>.</p>
+<h2 id="obtener-las-relaciones-de-un-nodo">Obtener las relaciones de un nodo</h2>
+<p>Si la consulta que hemos realizado, además de los nodos, contiene los paths o relaciones con los nodos, podemos estar interesados en mostrar las relaciones que llegan o salen de un nodo.</p>
+<p>Los métodos <code>getInboundRelationships()</code> y <code>getOutboundRelationships()</code> devuelven, respectivamente, las relaciones que llegan o salen de un nodo. El método <code>getRelationships()</code> devuelve todas las relaciones que mantiene un nodo, ya sean de entrada o de salida.</p>
+<p>El script siguiente muestra un ejemplo en el que a partir de un conjunto de películas (<code>$movies</code>), realiza una iteración con un <code>foreach</code> y para cada película muestra su título, obtiene todos las relaciones de entrada con <code>getInboundRelationships()</code>, y finalmente para cada relación obtiene su nodo de origen (el actor) con <code>getStartNode()</code>, y muestra su nombre con <code>getProperty('name')</code>.</p>
+<script src="https://gist.github.com/ualmtorres/ab71dd9ee4258807487f.js"></script>
+
+<p>Otro ejemplo interesante lo podemos encontrar en el fragmento siguiente. A partir de un conjunto de películas (<code>$movies</code>) se realiza una iteración con un <code>foreach</code> y para cada película se muestra su título, y se obtienen todas las relaciones con <code>getRelationships(&lt;relacion&gt;)</code>.</p>
+<p>Para cada relación se obtiene su nodo de origen (que podrá ser, según la relación, actor, director, guionista o productor) con <code>getStartNode()</code>, y muestra su nombre con <code>getProperty('name')</code>.</p>
+<script src="https://gist.github.com/ualmtorres/b67935b1d240c2f8643f.js"></script>
+
+<p>Puedes <a href="https://github.com/ualmtorres/Neo4jPHP">descargar el código de este tutorial</a> del GitHub de este proyecto.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Usando MongoDB y PHP/" title="MongoDB y PHP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                MongoDB y PHP
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ualmtorres" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/ualmtorres" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

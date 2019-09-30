@@ -1,0 +1,636 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="John Doe">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Posts</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:300,400,400i,700|&display=fallback">
+        <style>body,input{font-family:"Catamaran","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#usando-mongodb-y-php" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Bases de datos a gran escala" class="md-header-nav__button md-logo">
+          
+            <img src="../images/ual.jpg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Bases de datos a gran escala
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Posts
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Bases de datos a gran escala" class="md-nav__button md-logo">
+      
+        <img src="../images/ual.jpg" width="48" height="48">
+      
+    </a>
+    Bases de datos a gran escala
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Inicio" class="md-nav__link">
+      Inicio
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        MongoDB y PHP
+      </label>
+    
+    <a href="./" title="MongoDB y PHP" class="md-nav__link md-nav__link--active">
+      MongoDB y PHP
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manos-a-la-obra" class="md-nav__link">
+    Manos a la obra
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-la-libreria" class="md-nav__link">
+    Instalación de la librería
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-a-mongodb" class="md-nav__link">
+    Conexión a MongoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccion-de-la-coleccion" class="md-nav__link">
+    Selección de la colección
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insercion-de-documentos" class="md-nav__link">
+    Inserción de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizacion-de-documentos" class="md-nav__link">
+    Actualización de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-documentos" class="md-nav__link">
+    Eliminación de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busqueda-de-documentos" class="md-nav__link">
+    Búsqueda de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-de-agregacion" class="md-nav__link">
+    Framework de agregación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Neo4jPHP/" title="Neo4j y PHP" class="md-nav__link">
+      Neo4j y PHP
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manos-a-la-obra" class="md-nav__link">
+    Manos a la obra
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-la-libreria" class="md-nav__link">
+    Instalación de la librería
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-a-mongodb" class="md-nav__link">
+    Conexión a MongoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccion-de-la-coleccion" class="md-nav__link">
+    Selección de la colección
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insercion-de-documentos" class="md-nav__link">
+    Inserción de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actualizacion-de-documentos" class="md-nav__link">
+    Actualización de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-documentos" class="md-nav__link">
+    Eliminación de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busqueda-de-documentos" class="md-nav__link">
+    Búsqueda de documentos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-de-agregacion" class="md-nav__link">
+    Framework de agregación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="usando-mongodb-y-php">Usando MongoDB y PHP</h1>
+<p><strong>Duración estimada: 60 minutos</strong></p>
+<p>MongoDB nos ofrece gran cantidad de clientes para interactuar con él mediante gran cantidad de lenguajes de programación (<a href="https://docs.mongodb.com/ecosystem/drivers/">Drivers MongoDB</a>).</p>
+<p>En nuestro ejemplo interactuaremos con MongoDB mediante la Librería PHP para MongoDB.</p>
+<h2 id="instalacion">Instalación</h2>
+<p>Siguiendo la <a href="https://docs.mongodb.com/php-library/master/tutorial/install-php-library/">Información de instalación de la Librería PHP para MongoDB</a> podrás instalar estos dos componentes necesarios:</p>
+<ul>
+<li>La extensión <code>mongodb</code> para PHP en tu equipo a través del repositorio de extensiones PHP <a href="http://pecl.php.net/">PECL</a>.</li>
+<li>La Librería PHP en sí para MongoDB</li>
+</ul>
+<p>Aquí mostraremos los pasos de instalación en un Ubuntu Linux que ya tiene instalado previamente MongoDB y un entorno LAMP (<a href="http://ualmtorres.github.io/howtos/ConfiguracionEntornoGGVD/">Tutorial sobre configuración de un entorno LAMP+NoSQL</a>). Básicamente se trata de descargar e instalar el driver, añadir la extensión al <code>php.ini</code>, y reiniciar el servidor Apache.   </p>
+<p>Para descargar e instalar el driver lo haremos con </p>
+<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="n">pecl</span> <span class="n">install</span> <span class="n">mongodb</span>
+</pre></div>
+
+
+<p>Esto hará que se descargue el driver, se compile y se instale en nuestro sistema como una extensión.</p>
+<p>Si estuviésemos utilizando XAMPP, tendríamos que utilzar el <code>pecl</code> de XAMPP. Por ejemplo, podríamos hacerlo de una forma similiar a esta:</p>
+<div class="codehilite"><pre><span></span><span class="n">sudo</span> <span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">XAMPP</span><span class="o">/</span><span class="n">xamppfiles</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">pecl</span> <span class="n">install</span> <span class="n">mongodb</span>
+</pre></div>
+
+
+<p>Si no tienes instalado <code>PEAR</code> y el paquete <code>php-dev</code> deberás instalarlos con</p>
+<div class="codehilite"><pre><span></span>sudo apt-get install -y php-pear
+sudo apt-get install -y php-dev
+</pre></div>
+
+
+<p>A continuación hay que modificar el archivo <code>php.ini</code> para indicar que cargue la extensión de MongoDB (<code>mongodb.so</code>). <code>php.ini</code> se encuentra en <code>/etc/php/7.0/apache2/php.ini</code>. Tendrás que añadir lo siguiente en la zona de extensiones.</p>
+<div class="codehilite"><pre><span></span><span class="n">extension</span><span class="o">=</span><span class="n">mongodb</span><span class="p">.</span><span class="n">so</span>
+</pre></div>
+
+
+<p>Ahora, reiniciaremos el servidor Apache para que tengan efecto los cambios</p>
+<div class="codehilite"><pre><span></span>sudo service apache2 restart
+</pre></div>
+
+
+<h2 id="manos-a-la-obra">Manos a la obra</h2>
+<p>En este <a href="https://docs.mongodb.com/php-library/master/tutorial/">Tutorial sencillo de PHP con MongoDB</a> puedes encontrar un ejemplo guiado de cómo comenzar con los aspectos básicos del scripting PHP con MongoDB. Además, es muy conveniente tener a mano esta [Referencia] (https://docs.mongodb.com/php-library/master/reference/) en la que podrás encontrar casi todo lo que necesitas para tu aplicación PHP con MongoDB.</p>
+<h3 id="instalacion-de-la-libreria">Instalación de la librería</h3>
+<p>La <a href="https://docs.mongodb.com/php-library/master/">Librería PHP para MongoDB</a> ofrece una abstracción de alto nivel sobre el <a href="http://php.net/manual/en/set.mongodb.php">driver PHP para MongoDB</a>.</p>
+<p>Instalaremos la Librería PHP para MongoDB mediante <code>Composer</code> ejecutando el comando siguiente <strong>sobre la raíz de nuestro proyecto</strong></p>
+<div class="codehilite"><pre><span></span><span class="n">composer</span> <span class="n">require</span> <span class="n">mongodb</span><span class="o">/</span><span class="n">mongodb</span>
+</pre></div>
+
+
+<p>Esto instalará la librería en nuestro proyecto y generará los archivos de <code>autoload</code>.</p>
+<p>Para usar la librería en el proyecto comenzaremos con el script siguiente</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">require</span> <span class="s1">&#39;vendor/autoload.php&#39;</span><span class="p">;</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+
+<h3 id="conexion-a-mongodb">Conexión a MongoDB</h3>
+<p>Una vez instalada la librería, el proceso de conexión es muy sencillo. Basta con instanciar la clase <code>MongoDB\Client</code>. Si no indicamos parámetros se conectará usando <code>localhost</code> y el puerto predeterminado (<code>27017</code>).</p>
+<p>Esta clase sirve como punto de entrada a la MongoDB PHP Library. Usaremos la clase <code>\MongoDB\Client</code> para conectarnos a un servidor o cluster de servidores MongoDB y actúa como gateway para acceder a bases de datos o colecciones.</p>
+<script src="https://gist.github.com/ualmtorres/18da35108b1f9e96e310.js"></script>
+
+<h3 id="seleccion-de-la-coleccion">Selección de la colección</h3>
+<p>La conexión creada nos servirá para seleccionar la base de datos y la colección con la que queremos trabajar. Podremos crear un objeto para la base de datos y otro para la colección, o bien crear sólo el objeto de la colección si no queremos usar ninguno de los métodos aplicables a la base de datos (crear bases de datos, operaciones con el <em>profile</em>, <em>write  concern</em>, ...)</p>
+<p>A continuación vemos cómo crear un objeto para una base de datos de ejemplo denominada <code>ggvdTest</code> y un objeto para una colección de prueba denominada <code>actor</code>, que incluirá actores.  </p>
+<script src="https://gist.github.com/ualmtorres/2ab2429f06b267f893b2.js"></script>
+
+<h3 id="insercion-de-documentos">Inserción de documentos</h3>
+<p>Los documentos se crean mediante arrays asociativos. Estos documentos se insertarán con los métodos <code>insertOne()</code> o <code>insertMany()</code> sobre la colección correspondiente, para insertar uno o varios documentos, respectivamente.</p>
+<div class="admonition info">
+<p class="admonition-title">Información</p>
+<p>A los métodos de inserción, actualización y eliminación le podremos pasar opcionalmente un array de opciones (p.e. para especificar el <code>Write Concern</code>).</p>
+</div>
+<p><script src="https://gist.github.com/ualmtorres/03f1806501b4b5742c2d.js"></script></p>
+<h3 id="actualizacion-de-documentos">Actualización de documentos</h3>
+<p>Los documentos se actualizan mediante los métodos <code>updateOne()</code> o <code>updateMany()</code> sobre una colección. A los métodos le pasaremos el array asociativo con los criterios, el nuevo objeto (que podrá incluir operadores de actualización para modificar o reemplazar documentos), y de forma optativa las opciones de actualización. </p>
+<p>Entre las opciones de actualización más destacadas se encuentran <code>upsert</code> (<code>boolean</code>), que especifica si crear un documento nuevo o no si no hay ninguna coincidencia en la búsqueda, y <code>writeConcern</code>.</p>
+<p>En el caso de que usemos el método <code>updateOne()</code> y existan varios documentos que cumplan los criterios, sólo se actualizará el primer documento que cumpla los criterios.</p>
+<script src="https://gist.github.com/ualmtorres/f49457b604734c48cde0.js"></script>
+
+<h3 id="eliminacion-de-documentos">Eliminación de documentos</h3>
+<p>La eliminación de documentos se realiza mediante los métodos <code>deleteOne()</code> o <code>deleteMany()</code> aplicados a una colección. A los métodos le pasaremos el array asociativo con los criterios, y de forma optativa las opciones de eliminación. </p>
+<p>Al igual que con el método <code>updateOne()</code>, en el caso de que usemos el método <code>deleteOne()</code> y existan varios documentos a que cumplan los criterios, sólo se eliminará el primer documento que cumpla los criterios.</p>
+<script src="https://gist.github.com/ualmtorres/186551788f68b0a9e182.js"></script>
+
+<h3 id="busqueda-de-documentos">Búsqueda de documentos</h3>
+<p>La búsqueda de documentos se realiza básicamente mediante los métodos <code>findOne()</code> y  <code>find()</code> aplicados a una colección para buscar, respectivamente, uno o varios documentos que cumplan los criterios de búsqueda. En el caso de usar <code>find()</code>, recorreremos el resultado con un bucle <code>foreach</code> y en cada pasada cada documento será tratado como un array asociativo.</p>
+<script src="https://gist.github.com/ualmtorres/f210d59b0ffc8801654d.js"></script>
+
+<h3 id="framework-de-agregacion">Framework de agregación</h3>
+<p>Las operaciones relacionadas con el framework de agregación se realizan con el método <code>aggregate()</code>. A este método le proporcionaremos el <em>pipeline</em> de operaciones (<code>$match</code>, <code>$project</code>, <code>$group</code>, <code>$sort</code>, ...) en forma de array asociativo. El método devolverá el resultado en forma de array tal y como ocurre como cuando se usa el framework de agregación desde la shell.</p>
+<script src="https://gist.github.com/ualmtorres/70899dfccfbedaf5f59f.js"></script>
+
+<p>Puedes <a href="https://github.com/ualmtorres/MongoDBPHPSampleProject">descargar el código de este tutorial</a> del GitHub de este proyecto.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Inicio" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Anterior
+                </span>
+                Inicio
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Neo4jPHP/" title="Neo4j y PHP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                Neo4j y PHP
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ualmtorres" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/ualmtorres" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

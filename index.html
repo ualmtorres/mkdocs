@@ -1,0 +1,602 @@
+
+
+
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+        <meta name="author" content="John Doe">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copiar al portapapeles">
+      
+        <meta name="lang:clipboard.copied" content="Copiado al portapapeles">
+      
+        <meta name="lang:search.language" content="es">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No se encontraron documentos">
+      
+        <meta name="lang:search.result.one" content="1 documento encontrado">
+      
+        <meta name="lang:search.result.other" content="# documentos encontrados">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+    
+    
+      
+        <title>Bases de datos a gran escala</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:300,400,400i,700|&display=fallback">
+        <style>body,input{font-family:"Catamaran","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#master-en-tecnologias-y-aplicaciones-en-ingenieria-en-informatica-ual" tabindex="1" class="md-skip">
+        Saltar a contenido
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="Bases de datos a gran escala" class="md-header-nav__button md-logo">
+          
+            <img src="images/ual.jpg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Bases de datos a gran escala
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Inicio
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Teclee para comenzar búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="." title="Bases de datos a gran escala" class="md-nav__button md-logo">
+      
+        <img src="images/ual.jpg" width="48" height="48">
+      
+    </a>
+    Bases de datos a gran escala
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Inicio
+      </label>
+    
+    <a href="." title="Inicio" class="md-nav__link md-nav__link--active">
+      Inicio
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bdge-bases-de-datos-a-gran-escala" class="md-nav__link">
+    BDGE (Bases de Datos a Gran Escala)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    Contenidos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horario-de-clase-y-de-tutorias" class="md-nav__link">
+    Horario de clase y de tutorías
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-seguir-la-asignatura" class="md-nav__link">
+    Cómo seguir la asignatura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-superar-la-asignatura" class="md-nav__link">
+    Cómo superar la asignatura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollo-de-la-guia-docente" class="md-nav__link">
+    Desarrollo de la Guía docente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-complementario" class="md-nav__link">
+    Material complementario
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="Usando MongoDB y PHP/" title="MongoDB y PHP" class="md-nav__link">
+      MongoDB y PHP
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="Neo4jPHP/" title="Neo4j y PHP" class="md-nav__link">
+      Neo4j y PHP
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Tabla de contenidos</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bdge-bases-de-datos-a-gran-escala" class="md-nav__link">
+    BDGE (Bases de Datos a Gran Escala)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    Contenidos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horario-de-clase-y-de-tutorias" class="md-nav__link">
+    Horario de clase y de tutorías
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-seguir-la-asignatura" class="md-nav__link">
+    Cómo seguir la asignatura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-superar-la-asignatura" class="md-nav__link">
+    Cómo superar la asignatura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desarrollo-de-la-guia-docente" class="md-nav__link">
+    Desarrollo de la Guía docente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#material-complementario" class="md-nav__link">
+    Material complementario
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="master-en-tecnologias-y-aplicaciones-en-ingenieria-en-informatica-ual">Máster en Tecnologías y Aplicaciones en Ingeniería en Informática - UAL</h1>
+<h2 id="bdge-bases-de-datos-a-gran-escala">BDGE (Bases de Datos a Gran Escala)</h2>
+<p>El crecimiento en la producción de los datos de usuario, sensores, sistemas GPS, y demás, han disparado el tamaño y el tipo de los datos generados, los cuales además pueden ser de naturaleza no estructurada.</p>
+<p>Estos grandes volúmenes de datos suponen nuevos desafíos en términos de almacenamiento y procesamiento, por los que las técnicas tradicionales de gestión de datos no son aplicables directamente en este contexto. </p>
+<p>Bajo el término de NoSQL se encuentran los pricipales productos de bases de datos para tratar con este problema, como son las bases de datos orientadas a columnas, bases de datos clave-valor y bases de datos de documentos.</p>
+<p>En esta asignatura se estudian los conceptos fundamentales relacionados con NoSQL en el contexto de diferentes productos comerciales.</p>
+<h2 id="contenidos">Contenidos</h2>
+<ul>
+<li>El fenónomeno NoSQL</li>
+<li>Modelos de almacenamiento</li>
+<li>Escalabilidad y Replicación</li>
+<li>Desarrollo de aplicaciones con BD NoSQL</li>
+<li>Redis, MongoDB, Neo4j, ...</li>
+</ul>
+<h2 id="horario-de-clase-y-de-tutorias">Horario de clase y de tutorías</h2>
+<ul>
+<li>Clases: Laboratorio Análisis y Desarrollo de Software - CITE III – (1.01)</li>
+<li>Sesiones presenciales (<a href="InformacionGeneral/PlanificacionBDGE.md">Planficación detallada</a>]</li>
+<li>11 de abril de 18h a 20h</li>
+<li>13 de abril de 18h a 20h</li>
+<li>18 de abril de 18h a 20h</li>
+<li>20 de abril de 18h a 20h</li>
+<li>26 de abril de 18h a 20h</li>
+<li>27 de abril de 18h a 20h</li>
+<li>10 de mayo de 16h a 18h</li>
+<li>11 de mayo de 18h a 20h </li>
+<li>8 sesiones presenciales = 16 horas.</li>
+<li>7 sesiones no presenciales = 14 horas </li>
+<li>Profesor: Manuel Torres Gil<ul>
+<li>Tutorías: Martes y Jueves de 11h a 14h</li>
+<li>Despacho: 2.19.5 CITE III (2a planta)</li>
+<li>email: <a href="mailto:mtorres@ual.es">mtorres@ual.es</a></li>
+<li>Twitter: <a href="https://twitter.com/ualmtorres">@ualmtorres</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="como-seguir-la-asignatura">Cómo seguir la asignatura</h2>
+<ul>
+<li>Material disponible en<ul>
+<li>Aula Virtual</li>
+<li><a href="http://gitlabdoc.ual.es/mtorres/bdge2018">Repositorio Git</a> (accesible sólo mediante VPN UAL)</li>
+</ul>
+</li>
+<li>Clases participativas</li>
+<li>Contenido práctico</li>
+<li>Planteamiento de retos/desafíos<ul>
+<li>Redis</li>
+<li>MongoDB</li>
+<li>Neo4j</li>
+</ul>
+</li>
+<li><a href="InformacionGeneral/GuiaEstudioBDGE.md">Guía de estudio</a></li>
+</ul>
+<h2 id="como-superar-la-asignatura">Cómo superar la asignatura</h2>
+<p>Las competencias de la asignatura se evalúan mediante la aplicacion de los conocimientos teoricos de la asignatura en la solucion de los diferentes problemas planteados en las sesiones de grupos de trabajo. En concreto, para superar la asignatura, es condicion necesaria que el alumno:
+* Complete con exito y a tiempo todas las practicas desarrolladas en el Grupo de Trabajo. 
+* Desarrolle todas las actividades de Trabajo autónomo
+* Se valora la asistencia y participación
+* Planteamiento de retos/desafíos
+    * Redis
+    * MongoDB
+    * Neo4j</p>
+<p>En la <a href="./GuiaDocenteBDGE.pdf">Guía docente de la asignatura</a> se pueden encontrar la información detallada sobre la evaluación de la asignatura.</p>
+<h2 id="desarrollo-de-la-guia-docente">Desarrollo de la Guía docente</h2>
+<p>A continuación se muestra en qué sesión se desarrollarán cada uno de los contenidos que aparecen en la <a href="InformacionGeneral/GuiaDocenteBDGE.pdf">Guía docente</a> de la asignatura.</p>
+<ul>
+<li>Bases de datos no relacionales<ul>
+<li><a href="Presentaciones/01 El fenomeno NoSQL.pdf">El fenónomeno NoSQL</a></li>
+<li><a href="Presentaciones/02 Modelos de almacenamiento NoSQL.pdf">Modelos de almacenamiento NoSQL</a></li>
+</ul>
+</li>
+<li>
+<p>Consultas sobre grandes volúmenes de datos</p>
+<ul>
+<li>Consultas en bases de datos clave-valor <ul>
+<li><a href="Presentaciones/03 Redis.pdf">Bases de datos clave-valor (Redis)</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/RedisJava/">Interacción con Redis desde Java</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/RedisPHP/">Interacción con Redis desde PHP</a></li>
+</ul>
+</li>
+<li>
+<p>Consultas en bases de datos orientadas a documentos</p>
+<ul>
+<li><a href="Presentaciones/04 MongoDB - Introduccion.pdf">Bases de datos orientadas a documentos (MongoDB)</a></li>
+<li><a href="Presentaciones/04 MongoDB - Indexacion.pdf">MongoDB - Indexación</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/MongoDBPHP/">Interacción con MongoDB usando PHP</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/MongoDBJava/">Interacción con MongoDB usando Java</a></li>
+<li><a href="Presentaciones/04 MongoDB - Agregacion.pdf">MongoDB – Framework de Agregación</a></li>
+</ul>
+</li>
+<li>
+<p>Consultas en bases de datos orientadas a grafos </p>
+<ul>
+<li><a href="http://slides.com/manolotorres/deck/live#/">Bases de datos orientadas a Grafos (Neo4j)</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/Neo4jPHP/">Neo4j desde aplicaciones PHP</a></li>
+</ul>
+</li>
+<li>Consultas en bases de datos orientadas a columnas <ul>
+<li>Bases de datos orientadas a columnas (Cassandra)</li>
+</ul>
+</li>
+<li>Escalabilidad de bases de datos</li>
+<li>Replicación y sharding <ul>
+<li><a href="Presentaciones/04 MongoDB - Sharding.pdf">MongoDB - Sharding</a></li>
+<li><a href="Presentaciones/04 MongoDB - Replicacion.pdf">MongoDB - Replicación</a></li>
+</ul>
+</li>
+<li>Desarrollo de aplicaciones para grandes volúmenes de datos</li>
+<li>Desarrollo de aplicaciones sobre bases de datos NoSQL <ul>
+<li><a href="http://ualmtorres.github.io/howtos/ConfiguracionEntornoGGVD/">Configuración del entorno de la asignatura</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/RedisJava/">Interacción con Redis desde Java</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/RedisPHP/">Interacción con Redis desde PHP</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/MongoDBPHP/">Interacción con MongoDB usando PHP</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/MongoDBJava/">Interacción con MongoDB usando Java</a></li>
+<li><a href="http://slides.com/manolotorres/m-4/live#/">Object Data Mappers (ODM)</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/Neo4jPHP/">Neo4j desde aplicaciones PHP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="material-complementario">Material complementario</h2>
+<ul>
+<li><a href="Tutoriales/NodeJS/">Tutorial de Node.js</a></li>
+<li><a href="http://ualmtorres.github.io/howtos/RedisNodeJS/">Interacción con Redis usando Node.js</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="Usando MongoDB y PHP/" title="MongoDB y PHP" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Siguiente
+                </span>
+                MongoDB y PHP
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ualmtorres" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/ualmtorres" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/application.c648116f.js"></script>
+      
+        
+        
+          
+          <script src="assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="assets/javascripts/lunr/lunr.es.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+    
+  </body>
+</html>
